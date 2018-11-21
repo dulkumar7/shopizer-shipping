@@ -26,8 +26,8 @@ import java.util.Map;
 @Controller
 public class TaxConfigurationController {
 	
-	/*@Inject
-	private TaxService taxService = null;*/
+	@Inject
+	private TaxService taxService = null;
 
 	@Autowired
 	private TaxServiceClient taxServiceClient;
@@ -41,8 +41,8 @@ public class TaxConfigurationController {
 		setMenu(model, request);
 		MerchantStore store = (MerchantStore)request.getAttribute(Constants.ADMIN_STORE);
 		
-		//TaxConfiguration taxConfiguration = taxService.getTaxConfiguration(store); //previous code
-		TaxConfiguration taxConfiguration = taxServiceClient.getTaxConfiguration(store); //current microservice
+		TaxConfiguration taxConfiguration = taxService.getTaxConfiguration(store); //previous code
+		//TaxConfiguration taxConfiguration = taxServiceClient.getTaxConfiguration(store); //current microservice
 		if(taxConfiguration == null) {
 			
 			taxConfiguration = new TaxConfiguration();

@@ -1,4 +1,4 @@
-package com.shopizer.shop.services.taxservice.config;
+/*package com.shopizer.shop.services.taxservice.config;
 
 import com.shopizer.shop.services.taxservice.constants.TaxServiceConstants;
 import org.springframework.context.annotation.Bean;
@@ -38,3 +38,4 @@ public class SwaggerConfig {
                         TaxServiceConstants.SWAGGER_APP_LICENCE_URL);
     }
 }
+*/
